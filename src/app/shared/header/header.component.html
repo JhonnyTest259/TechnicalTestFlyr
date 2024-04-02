@@ -1,0 +1,41 @@
+<header [ngClass]="{'header--animation':isActive}" class="header">
+    <button (click)="setActive()" class="header__button">
+        <svg *ngIf="!isActive" class="header__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+            fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+        </svg>
+        <svg *ngIf="isActive || isSubMenuActive" class="header__svg" xmlns="http://www.w3.org/2000/svg" width="16"
+            height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path
+                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+        </svg>
+    </button>
+    <figure class="header__logo">
+        <img class="header__logo--size" src="assets/header_logo.png" alt="">
+    </figure>
+
+    <nav [ngClass]="{'header__nav--active':isActive}" class="header__nav">
+        <ul class="header__ul">
+            <li class="header__li"><a href="" class="header__a">Check-in</a></li>
+            <li class="header__li"><a href="" class="header__a">Manage my booking</a></li>
+            <li class="header__li">
+                <button class="header__a header__asubmenu" (click)="toggleSubMenu()">Information</button>
+                <div class="header__submenu" [ngClass]="{'header__submenu--active': isSubMenuActive}">
+                    <p class="header__submenutitle"><strong>Information</strong></p>
+                    <ul class="header__ul header__ulsubmenu">
+                        <li class="header__li"><a href="" class="header__a"> Help center</a></li>
+                        <li class="header__li"><a href="" class="header__a"> Flight state</a></li>
+                        <li class="header__li"><a href="" class="header__a"> Airplanes</a></li>
+                        <li class="header__li"><a href="" class="header__a"> Routes</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <figure class="header__langicon">
+        <img class="header__langicon--size" src="assets/language_icon.png" alt="">
+    </figure>
+
+</header>

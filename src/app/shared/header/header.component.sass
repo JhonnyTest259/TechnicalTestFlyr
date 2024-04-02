@@ -1,0 +1,145 @@
+.header
+    width: 100%
+    height: 50px
+    padding: 1em
+
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+    @media screen and (min-width: 448px)
+        width: 95%
+        height: 80px
+        position: relative
+        left: 25px
+    &__logo
+        &--size
+            width: 103px
+            height: 33px
+            @media screen and (min-width: 448px)
+                width: 154px
+                height: 49px
+    &__langicon
+        text-align: end
+        &--size
+            width: 18px
+            height: 18px
+        @media screen and (min-width: 448px)
+            display: flex
+            &::after
+                content: "English"
+                margin-left: 5px
+
+    &__button
+        cursor: pointer
+        transition: margin-left 0.3s ease
+        @media screen and (min-width: 448px)
+            display: none
+
+    &__svg
+        width: 24px
+        height: 24px
+    &__nav
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 50px
+        left: 0
+        background-color: white
+        margin-left: -100%
+        overflow: hidden
+        transition: all .5s ease
+        z-index: 1
+        padding: 1em
+        pointer-events: none
+        &--active
+            margin-left: 0
+            pointer-events: auto
+
+        @media screen and (min-width: 448px)
+            height: auto
+            position: relative
+            margin-left: 0
+            top: 0
+            pointer-events: auto
+    &__a
+        cursor: pointer
+    &__ul
+        height: 165px
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+
+        @media screen and (min-width: 448px)
+            height: auto
+            margin-left: 40px
+            justify-content: flex-start
+            flex-flow: row wrap
+    &__ulsubmenu
+        @media screen and (min-width: 448px)
+            height: 100%
+            margin-left: 0
+            display: flex
+            justify-content: space-evenly
+            flex-flow: column nowrap
+
+    &__li
+        margin: 0 .5em
+        @media screen and (min-width: 448px)
+            font-size: 16px
+
+    &__li:not(:last-child)
+        padding-bottom: 15px
+        border-bottom: 1px solid #ccc
+
+        @media screen and (min-width: 448px)
+            padding-bottom: 0
+            border: 0
+
+    &__submenutitle
+        margin-bottom: 15px
+
+        @media screen and (min-width: 448px)
+            display: none
+    &__submenu
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        background-color: white
+        margin-left: -100%
+        overflow: hidden
+        transition: all .5s ease
+        z-index: 1
+        padding: 1em
+        pointer-events: none
+        &--active
+            margin-left: 0
+            pointer-events: auto
+
+        @media screen and (min-width: 448px)
+            display: none
+            position: fixed
+            top: auto
+            left: auto
+            width: 250px
+            height: 189px
+            border-radius: 16px
+            margin-top: 25px
+            margin-left: -75px
+            transition: none
+            box-shadow: 0px 0px 10px darkgrey
+            &--active
+                display: block
+            &::before
+                content: ""
+                position: fixed
+                width: 24px
+                height: 24px
+                top: 63px
+                border-bottom: 0px
+                background-color: white
+                margin: 0 97px
+                transform: rotate(224deg)
+                box-shadow: 2px 2px 3px darkgrey

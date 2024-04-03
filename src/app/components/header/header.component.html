@@ -1,5 +1,5 @@
-<header [ngClass]="{'header--animation':isActive}" class="header">
-    <button (click)="setActive()" class="header__button">
+<header [ngClass]="{'header--animation':isActive}" class="header" aria-label="Header">
+    <button (click)="setActive()" class="header__button" aria-label="Toggle menu">
         <svg *ngIf="!isActive" class="header__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
             fill="currentColor" viewBox="0 0 16 16">
             <path fill-rule="evenodd"
@@ -12,7 +12,7 @@
         </svg>
     </button>
     <figure class="header__logo">
-        <img class="header__logo--size" src="assets/logo.png" alt="">
+        <img class="header__logo--size" src="assets/logo.png" alt="Logo de la compañía">
     </figure>
 
     <nav [ngClass]="{'header__nav--active':isActive}" class="header__nav">
@@ -35,7 +35,7 @@
     </nav>
 
     <figure class="header__langicon">
-        <img class="header__langicon--size" src="assets/language_icon.png" alt="">
+        <img class="header__langicon--size" src="assets/language_icon.png" alt="Icono de idioma">
     </figure>
 
 </header>

@@ -9,7 +9,7 @@
     @media screen and (min-width: 738px)
         background: linear-gradient(90.01deg, #1D1823 32.05%, #537FE7 99.99%)
         margin: 29px 10px
-        flex-flow: row wrap
+        flex-flow: row nowrap
         height: 386px
 
     &__media
@@ -23,11 +23,11 @@
         background-position-x: -23px
         background-position-y: -408px
         @media screen and (min-width: 738px)
-            width: 40%
+            width: 460px
             height: 100%
-            background-position-x: -141px
-            background-position-y: -269px
-            clip-path: ellipse(54% 70% at 37% 51%)
+            background-position-x: -70px
+            background-position-y: 68%
+            clip-path: ellipse(229px 310px at 37% 51%)
     &__h1
         font-size: 34px
         line-height: 39.84px
@@ -44,4 +44,7 @@
         padding: .6em
         @media screen and (min-width: 738px)
             width: 60%
-            margin-top: 10%
+            margin-top: 0
+            display: flex
+            flex-direction: column
+            justify-content: center

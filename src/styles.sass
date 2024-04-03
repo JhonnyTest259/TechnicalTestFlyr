@@ -7,7 +7,6 @@
   --tipo-principal: 'Roboto', Arial, sans-serif
   --tipo-secundaria: Verdana
 
-
 /* Reseteamos los margin y paddings de todas las etiquetas */
 * , *::before , *::after
   margin: 0
@@ -18,8 +17,6 @@
 
 *::before , *::after
   display: block
-
-
 
 /* Reseteamos los enlaces para funcionar como cajas... */
 a
@@ -79,7 +76,9 @@ svg
 
 /* Configuramos la tipografía para toda la web */
 body
-  min-height: 100vh
   font-size: 100%
   font-family: var(--tipo-principal)
+  min-height: 100vh
+  display: flex
+  flex-direction: column
   // overflow: hidden

@@ -1,0 +1,47 @@
+.destination
+    height: 722px
+    background: linear-gradient(180deg, #181823 39.26%, #537FE7 100%)
+    color: white
+    border-radius: 16px
+
+    display: flex
+    flex-flow: column wrap
+    @media screen and (min-width: 738px)
+        background: linear-gradient(90.01deg, #1D1823 32.05%, #537FE7 99.99%)
+        margin: 29px 10px
+        flex-flow: row wrap
+        height: 386px
+
+    &__media
+        width: 100%
+        height: 50%
+        clip-path: ellipse(92% 51% at 50% 43%)
+        border-radius: 16px
+        background-image: url(/assets/banner_destinations.jpg)
+        background-size: auto
+        background-repeat: no-repeat
+        background-position-x: -23px
+        background-position-y: -408px
+        @media screen and (min-width: 738px)
+            width: 40%
+            height: 100%
+            background-position-x: -141px
+            background-position-y: -269px
+            clip-path: ellipse(54% 70% at 37% 51%)
+    &__h1
+        font-size: 34px
+        line-height: 39.84px
+        &--style
+            font-weight: 400
+            color: #C0EEF2
+    &__p
+        margin-top: 25px
+        font-size: 18px
+        line-height: 21.09px
+    &__content
+        margin-top: 50px
+        width: 100%
+        padding: .6em
+        @media screen and (min-width: 738px)
+            width: 60%
+            margin-top: 10%

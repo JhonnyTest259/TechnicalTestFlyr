@@ -48,7 +48,7 @@
         background-color: white
         margin-left: -100%
         overflow: hidden
-        transition: all .5s ease
+        transition: margin-left .5s ease
         z-index: 1
         padding: 1em
         pointer-events: none
@@ -62,6 +62,7 @@
             margin-left: 0
             top: 0
             pointer-events: auto
+            transition: none
     &__a
         cursor: pointer
     &__ul
@@ -85,6 +86,8 @@
 
     &__li
         margin: 0 .5em
+        &--notunderline:not(:last-child)
+            border-bottom: none !important
         @media screen and (min-width: 738px)
             font-size: 16px
 
@@ -110,7 +113,7 @@
         background-color: white
         margin-left: -100%
         overflow: hidden
-        transition: all .5s ease
+        transition: margin-left .5s ease
         z-index: 1
         padding: 1em
         pointer-events: none
